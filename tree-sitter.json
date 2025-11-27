@@ -1,0 +1,30 @@
+{
+  "name": "typo3_fluid",
+  "scope": "source.typo3-fluid",
+  "file-types": [
+    "fluid",
+    "html"
+  ],
+  "injection-regex": "fluid",
+  "comment-token": "#",
+  "highlights": [
+    "queries/highlights.scm"
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "maintainers": [
+      "Daniel Kary"
+    ]
+  },
+  "grammars": [
+    {
+      "name": "typo3_fluid",
+      "scope": "source.typo3-fluid",
+      "file-types": [
+        "fluid",
+        "html"
+      ]
+    }
+  ]
+}

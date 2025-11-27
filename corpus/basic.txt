@@ -1,0 +1,21 @@
+====
+Simple Fluid expressions
+====
+
+{page.title}
+{f:if(condition: page.isHome, then: 'Home', else: 'Page')}
+
+---
+
+(source_file
+  (fluid_expression
+    (identifier))
+  (fluid_expression
+    (identifier)
+    (identifier)
+    (identifier)
+    (identifier)
+    (string)
+    (identifier)
+    (string)))
+

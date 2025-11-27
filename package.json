@@ -1,0 +1,22 @@
+{
+  "name": "tree-sitter-typo3-fluid",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for TYPO3 Fluid templates",
+  "main": "index.js",
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test"
+  },
+  "keywords": [
+    "tree-sitter",
+    "typo3",
+    "fluid",
+    "templating"
+  ],
+  "author": "Daniel Kary",
+  "license": "MIT",
+  "devDependencies": {
+    "tree-sitter-cli": "^0.24.1"
+  }
+}
+
