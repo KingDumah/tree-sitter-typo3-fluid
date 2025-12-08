@@ -34,14 +34,10 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "fluid_expression",
-          "named": true
-        },
-        {
-          "type": "text",
           "named": true
         }
       ]
@@ -67,10 +63,6 @@
   },
   {
     "type": "operator",
-    "named": true
-  },
-  {
-    "type": "text",
     "named": true
   },
   {

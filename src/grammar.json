@@ -3,19 +3,10 @@
   "name": "typo3_fluid",
   "rules": {
     "source_file": {
-      "type": "REPEAT",
+      "type": "REPEAT1",
       "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "fluid_expression"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "text"
-          }
-        ]
+        "type": "SYMBOL",
+        "name": "fluid_expression"
       }
     },
     "fluid_expression": {
@@ -62,16 +53,6 @@
           "value": "}"
         }
       ]
-    },
-    "text": {
-      "type": "TOKEN",
-      "content": {
-        "type": "REPEAT1",
-        "content": {
-          "type": "PATTERN",
-          "value": "[^{}]+"
-        }
-      }
     },
     "identifier": {
       "type": "PATTERN",

@@ -7,10 +7,9 @@ module.exports = grammar({
   extras: $ => [/\s+/, $.comment],
 
   rules: {
-    source_file: $ => repeat(choice(
-      $.fluid_expression,
-      $.text
-    )),
+    // INJECTION-ONLY: Only parse Fluid expressions, no surrounding text
+    // HTML parser will handle text content and inject Fluid expressions
+    source_file: $ => repeat1($.fluid_expression),
 
     // { ... } expressions used in Fluid templates
     fluid_expression: $ => seq(
@@ -20,13 +19,10 @@ module.exports = grammar({
         $.identifier,
         $.number,
         $.operator,
-        /[^}]/    // fallback for now
+        /[^}]/    // fallback for any other content
       ))),
       "}"
     ),
-
-    // Plain text outside of Fluid expressions
-    text: _ => token(repeat1(/[^{}]+/)),
 
     identifier: _ => /[a-zA-Z_][a-zA-Z0-9_:\\.]*/,
 
